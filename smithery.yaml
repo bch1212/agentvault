@@ -1,0 +1,26 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - agentvaultApiUrl
+      - agentvaultAgentKey
+    properties:
+      agentvaultApiUrl:
+        type: string
+        title: AgentVault API URL
+        description: Base URL of your AgentVault deployment (default https://agentvault-api-production.up.railway.app)
+        default: https://agentvault-api-production.up.railway.app
+      agentvaultAgentKey:
+        type: string
+        title: Agent API Key
+        description: The avk_... key issued to this agent identity.
+  commandFunction: |
+    (config) => ({
+      command: "python",
+      args: ["-m", "mcp_server"],
+      env: {
+        AGENTVAULT_API_URL: config.agentvaultApiUrl,
+        AGENTVAULT_AGENT_KEY: config.agentvaultAgentKey
+      }
+    })

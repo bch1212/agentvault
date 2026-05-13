@@ -17,12 +17,14 @@ jobs:
         working-directory: packages/agentvault-mcp
     steps:
       - uses: actions/checkout@v4
-      - run: npm install -g npm@latest
 
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
           registry-url: "https://registry.npmjs.org"
+
+      - name: Upgrade npm (need >=10.5 for --provenance)
+        run: npm install -g npm@latest
 
       - name: Install + build
         run: |

@@ -11,3 +11,4 @@ build/
 .DS_Store
 node_modules/
 .railway/
+packages/agentvault-mcp/node_modules/

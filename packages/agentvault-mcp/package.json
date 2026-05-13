@@ -1,0 +1,39 @@
+{
+  "name": "agentvault-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for AgentVault — AI-native credential vault for autonomous agents.",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "credentials", "vault", "secrets-management", "ai-agents", "claude", "openai"],
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "agentvault-mcp": "dist/index.js"
+  },
+  "mcpName": "io.github.bch1212/agentvault",
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/bch1212/agentvault",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bch1212/agentvault.git",
+    "directory": "packages/agentvault-mcp"
+  },
+  "author": "Brett Halverson <brett.halverson@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  }
+}

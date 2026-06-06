@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.bch1212/agentvault",
+  "description": "AI-native credential vault for autonomous agents — encrypted API keys, per-agent budgets, audit logs, and MCP tools.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/bch1212/agentvault",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agentvault-api-production.up.railway.app/mcp"
+    }
+  ]
+}
